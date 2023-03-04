@@ -1,0 +1,32 @@
+{
+  "name": "tester-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alpha",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/voice": "^0.10.0",
+    "@hizollo/games": "^2.4.0",
+    "@iamtraction/google-translate": "^1.1.2",
+    "axios": "^0.27.2",
+    "canvacord": "^5.4.2",
+    "discord": "^0.8.2",
+    "discord-canvas": "^1.4.1",
+    "discord-xp": "^1.1.16",
+    "discord.js": "^13.10.3",
+    "easy-discord-chatbot": "^0.0.4",
+    "fetch": "^1.1.0",
+    "inspirobot.js": "^1.0.1",
+    "insult": "^0.0.3",
+    "moment": "^2.29.3",
+    "mongoose": "^6.4.6",
+    "translate": "^1.4.1",
+    "weather-js": "^2.0.0",
+    "weky": "^3.1.8",
+    "weky-anysad": "^3.3.4"
+  }
+}
