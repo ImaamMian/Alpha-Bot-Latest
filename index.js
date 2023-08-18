@@ -16,6 +16,12 @@ const Levels = require('discord-xp')
 const fs = require('fs');
 const request = require("request");
 const { SlashCommandBuilder } = require('@discordjs/builders');
+const { Configuration, OpenAIApi } = require("openai");
+
+const configuration = new Configuration({
+  apiKey: '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',
+});
+const openai = new OpenAIApi(configuration);
 //const UserSchema = new mongoose.Schema({
   //username: mongoose.SchemaTypes.String,
 //})
@@ -1031,308 +1037,6 @@ if(msg.content.toLowerCase().startsWith("!heart_locket")){
     });
 }*/
 
-/*
-THESE ONES DONT WORK 
-if(msg.content.toLowerCase().startsWith("!ace")){
-  processImage(msg,"ace")
-}
-
-if(msg.content.toLowerCase().startsWith("!equations")){
-  processImage(msg,"equations")
-}*/
-
-/*
-if(msg.content.toLowerCase().startsWith("!glitch")){
-  processImage(msg,"glitch")
-}
-
-if(msg.content.toLowerCase().startsWith("!boil")){
-  processImage(msg,"boil")
-}
-
-if(msg.content.toLowerCase().startsWith("!earthquake")){
-  processImage(msg,"earthquake")
-}
-if(msg.content.toLowerCase().startsWith("!hearts")){
-  processImage(msg,"hearts")
-}
-
-if(msg.content.toLowerCase().startsWith("!shear")){
-  processImage(msg,"shear")
-}
-if(msg.content.toLowerCase().startsWith("!wave")){
-  processImage(msg,"wave")
-}
-
-if(msg.content.toLowerCase().startsWith("!patpat")){
-  processImage(msg,"patpat")
-}
-
-if(msg.content.toLowerCase().startsWith("!burn")){
-  processImage(msg,"burn")
-}
-
-if(msg.content.toLowerCase().startsWith("!shock")){
-  processImage(msg,"shock")
-}
-
-if(msg.content.toLowerCase().startsWith("!bomb")){
-  processImage(msg,"bomb")
-}
-
-if(msg.content.toLowerCase().startsWith("!bonks")){
-  processImage(msg,"bonks")
-}
-////////////
-if(msg.content.toLowerCase().startsWith("!explicit")){
-  processImage(msg,"explicit")
-}
-if(msg.content.toLowerCase().startsWith("!blur")){
-  processImage(msg,"blur")
-}
-if(msg.content.toLowerCase().startsWith("!lamp")){
-  processImage(msg,"lamp")
-}
-if(msg.content.toLowerCase().startsWith("!rain")){
-  processImage(msg,"rain")
-}
-if(msg.content.toLowerCase().startsWith("!canny")){
-  processImage(msg,"canny")
-}
-if(msg.content.toLowerCase().startsWith("!cartoon")){
-  processImage(msg,"cartoon")
-}
-if(msg.content.toLowerCase().startsWith("!layers")){
-  processImage(msg,"layers")
-}
-if(msg.content.toLowerCase().startsWith("!radiate")){
-  processImage(msg,"radiate")
-}
-if(msg.content.toLowerCase().startsWith("!shoot")){
-  processImage(msg,"shoot")
-}
-if(msg.content.toLowerCase().startsWith("!tv")){
-  processImage(msg,"tv")
-}
-if(msg.content.toLowerCase().startsWith("!magnify")){
-  processImage(msg,"magnify")
-}
-if(msg.content.toLowerCase().startsWith("!print")){
-  processImage(msg,"print")
-}
-if(msg.content.toLowerCase().startsWith("!matrix")){
-  processImage(msg,"matrix")
-}
-if(msg.content.toLowerCase().startsWith("!sensitive")){
-  processImage(msg,"sensitive")
-}
-if(msg.content.toLowerCase().startsWith("!dilate")){
-  processImage(msg,"dilate")
-}
-if(msg.content.toLowerCase().startsWith("!pattern")){
-  processImage(msg,"pattern")
-}
-if(msg.content.toLowerCase().startsWith("!logoff")){
-  processImage(msg,"logoff")
-}
-/////////////////////
-if(msg.content.toLowerCase().startsWith("!fire")){
-  processImage(msg,"fire")
-}
-if(msg.content.toLowerCase().startsWith("!fan")){
-  processImage(msg,"fan")
-}
-if(msg.content.toLowerCase().startsWith("!melt")){
-  processImage(msg,"melt")
-}
-if(msg.content.toLowerCase().startsWith("!cracks")){
-  processImage(msg,"cracks")
-}
-if(msg.content.toLowerCase().startsWith("!endless")){
-  processImage(msg,"endless")
-}
-if(msg.content.toLowerCase().startsWith("!bayer")){
-  processImage(msg,"bayer")
-}
-if(msg.content.toLowerCase().startsWith("!slice")){
-  processImage(msg,"slice")
-}
-if(msg.content.toLowerCase().startsWith("!spikes")){
-  processImage(msg,"spikes")
-}
-if(msg.content.toLowerCase().startsWith("!blocks")){
-  processImage(msg,"blocks")
-}
-if(msg.content.toLowerCase().startsWith("!phone")){
-  processImage(msg,"phone")
-}
-if(msg.content.toLowerCase().startsWith("!laundry")){
-  processImage(msg,"laundry")
-}
-if(msg.content.toLowerCase().startsWith("!pizza")){
-  processImage(msg,"pizza")
-}
-if(msg.content.toLowerCase().startsWith("!ripped")){
-  processImage(msg,"ripped")
-}
-if(msg.content.toLowerCase().startsWith("!cinema")){
-  processImage(msg,"cinema")
-}
-if(msg.content.toLowerCase().startsWith("!emojify")){
-  processImage(msg,"emojify")
-}
-if(msg.content.toLowerCase().startsWith("!stretch")){
-  processImage(msg,"stretch")
-}
-if(msg.content.toLowerCase().startsWith("!dots")){
-  processImage(msg,"dots")
-}
-if(msg.content.toLowerCase().startsWith("!tunnel")){
-  processImage(msg,"tunnel")
-}
-if(msg.content.toLowerCase().startsWith("!zonk")){
-  processImage(msg,"zonk")
-}
-if(msg.content.toLowerCase().startsWith("!knit")){
-  processImage(msg,"knit")
-}
-if(msg.content.toLowerCase().startsWith("!plank")){
-  processImage(msg,"plank")
-}
-if(msg.content.toLowerCase().startsWith("!shred")){
-  processImage(msg,"shred")
-}
-if(msg.content.toLowerCase().startsWith("!liquefy")){
-  processImage(msg,"liquefy")
-}
-if(msg.content.toLowerCase().startsWith("!liquefy")){
-  processImage(msg,"poly")
-}
-if(msg.content.toLowerCase().startsWith("!spin")){
-  processImage(msg,"spin")
-}
-if(msg.content.toLowerCase().startsWith("!plates")){
-  processImage(msg,"plates")
-}
-if(msg.content.toLowerCase().startsWith("!plates")){
-  processImage(msg,"lsd")
-}
-if(msg.content.toLowerCase().startsWith("!lines")){
-  processImage(msg,"lines")
-}
-if(msg.content.toLowerCase().startsWith("!ipcam")){
-  processImage(msg,"ipcam")
-}
-if(msg.content.toLowerCase().startsWith("!reflection")){
-  processImage(msg,"reflection")
-}
-if(msg.content.toLowerCase().startsWith("!stereo")){
-  processImage(msg,"stereo")
-}
-if(msg.content.toLowerCase().startsWith("!kanye")){
-  processImage(msg,"kanye")
-}
-if(msg.content.toLowerCase().startsWith("!letters")){
-  processImage(msg,"letters")
-}
-if(msg.content.toLowerCase().startsWith("!wiggle")){
-  processImage(msg,"wiggle")
-}
-if(msg.content.toLowerCase().startsWith("!tiles")){
-  processImage(msg,"tiles")
-}
-
-if(msg.content.toLowerCase().startsWith("!billboard")){
-  processImage(msg,"billboard")
-}
-if(msg.content.toLowerCase().startsWith("!flag")){
-  processImage(msg,"flag")
-}
-
-
-
-
-
-
-
-if(msg.content.toLowerCase().startsWith("!gallery")){
-  processImage(msg,"gallery")
-}
-if(msg.content.toLowerCase().startsWith("!paparazzi")){
-  processImage(msg,"paparazzi")
-}
-if(msg.content.toLowerCase().startsWith("!balls")){
-  processImage(msg,"balls")
-}
-
-if(msg.content.toLowerCase().startsWith("!half_invert")){
-  processImage(msg,"half_invert")
-}
-if(msg.content.toLowerCase().startsWith("!roll")){
-  processImage(msg,"roll")
-}
-if(msg.content.toLowerCase().startsWith("!clock")){
-  processImage(msg,"clock")
-}
-if(msg.content.toLowerCase().startsWith("!warp")){
-  processImage(msg,"warp")
-}
-if(msg.content.toLowerCase().startsWith("!ads")){
-  processImage(msg,"ads")
-}
-if(msg.content.toLowerCase().startsWith("!optics")){
-  processImage(msg,"optics")
-}
-if(msg.content.toLowerCase().startsWith("!abstract")){
-  processImage(msg,"abstract")
-}
-if(msg.content.toLowerCase().startsWith("!infinity")){
-  processImage(msg,"infinity")
-}
-if(msg.content.toLowerCase().startsWith("!bubble")){
-  processImage(msg,"bubble")
-}
-if(msg.content.toLowerCase().startsWith("!cloth")){
-  processImage(msg,"cloth")
-}
-if(msg.content.toLowerCase().startsWith("!gameboy_camera")){
-  processImage(msg,"gameboy_camera")
-}
-if(msg.content.toLowerCase().startsWith("!gameboy_camera")){
-  processImage(msg,"ripple")
-}
-if(msg.content.toLowerCase().startsWith("!globe")){
-  processImage(msg,"globe")
-}
-
-if(msg.content.toLowerCase().startsWith("!cow")){
-  processImage(msg,"cow")
-}
-if(msg.content.toLowerCase().startsWith("!pyramid")){
-  processImage(msg,"pyramid")
-}
-if(msg.content.toLowerCase().startsWith("!wall")){
-  processImage(msg,"wall")
-}
-if(msg.content.toLowerCase().startsWith("!cube")){
-  processImage(msg,"cube")
-}
-if(msg.content.toLowerCase().startsWith("!paint")){
-  processImage(msg,"paint")
-}
-if(msg.content.toLowerCase().startsWith("!shine")){
-  processImage(msg,"shine")
-}
-if(msg.content.toLowerCase().startsWith("!neon")){
-  processImage(msg,"neon")
-}
-if(msg.content.toLowerCase().startsWith("!flush")){
-  processImage(msg,"flush")
-}
-if(msg.content.toLowerCase().startsWith("!scrapbook")){
-  processImage(msg,"scrapbook")
-}
-*/
 ///////////////////////////////////////////////////////////////////////////////////
 ///////// ADD AND REMOVE PEOPLE FROM SNIPE SHORTCUT USING JSON FILE////////////////
 ///////////////////////////////////////////////////////////////////////////////////
@@ -1484,6 +1188,14 @@ if(msg.content.startsWith("!urban")){
     }
   }
   msg.channel.send({embeds: [Dictionary]});
+}
+
+if (msg.channel.id == 1081403859727032542) {
+  const completion = await openai.createChatCompletion({
+    model: "gpt-3.5-turbo",
+    messages: [{role: "user", content: msg.content}],
+  });
+  msg.channel.send(completion.data.choices[0].message);
 }
 
 })
